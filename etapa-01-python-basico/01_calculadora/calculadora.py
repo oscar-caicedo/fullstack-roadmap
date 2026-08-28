@@ -6,7 +6,7 @@ num3 = int(input("Digite el tercer numero: "))
 
 print("Vas a escojer una de estas operaciones: ")
 print ("Ten en cuenta si escojes division  ")
-opcion = (input("Escriba una opcion de operacion (suma, resta, multi, divi, potencia, raiz, modulo, promedio: )")).lower.strip
+opcion = (input("Escriba una opcion de operacion (suma, resta, multi, divi, potencia, raiz, modulo, promedio: )")).lower().strip()
 #suma
 if opcion == "suma":
     print("La suma es: ", num1 + num2 + num3)
