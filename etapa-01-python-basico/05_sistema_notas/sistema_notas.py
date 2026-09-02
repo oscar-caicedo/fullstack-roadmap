@@ -47,8 +47,8 @@ while True:
     if otro == "S":
         continue
     else:    
-    print ("---------------------------")
-    print ("La nota mas alta es: ", maximo)
-    print ("La nota mas baja es: ", minimo)       
-    prom_grupal = sum_prom / contador 
-    print ("El promedio general del grupo es: ", prom_grupal)
+        print ("---------------------------")
+        print ("La nota mas alta es: ", maximo)
+        print ("La nota mas baja es: ", minimo)       
+        prom_grupal = sum_prom / contador 
+        print ("El promedio general del grupo es: ", prom_grupal)
