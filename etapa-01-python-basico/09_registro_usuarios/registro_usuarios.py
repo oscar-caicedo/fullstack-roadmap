@@ -38,6 +38,8 @@ while True:
                 usuario = input("Ingrese su nombre de usuario: ")
                 if usuario in registro:
                     pin = input("Ingrese su contraseña: ")
+                    print("Bienvenido")
+                    break
                 else:
                     print("El usuario no existe")
                     if registro[usuario] == pin:

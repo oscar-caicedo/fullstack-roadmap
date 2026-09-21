@@ -1,33 +1,35 @@
 tareas = []
-{
-    "id": 1,
-    "titulo": "Estudiar Py",
-    "prioridad": "Alta",
-    "estado": "Pendiente"
-}
 siguiente_id = 1
 
 def mostrar_menu():
     while True:
         
+        print("\n=== GESTION DE TAREAS ===")
         print("1. Agregar Tarea")
         print("2. Listar Tareas")
         print("3. Completar Tareas")
         print("4. Eliminar Tareas")
         print("5. Filtrar Tareas")
         print("6. Salir")
-        return
         
 def buscar_tarea_por_id(id_tarea):
     for tarea in tareas:
-        if tarea in tareas:
+        if tarea["id"] == id_tarea:
             return tarea
-        return None
+    return None
     
 def agregar_tarea():
-    titulo = input("Titulo de la tarea: ").strip()
-    prioridad = input("Prioridad (Alta/Media/Baja): ").strip().title()
+    global siguiente_id
     
+    titulo = input("Titulo de la tarea: ").strip()
+    if not titulo:
+        print("El titulo no puede estar vacio")
+        return
+    
+    prioridad = input("Prioridad (Alta/Media/Baja): ").strip().title()
+    if prioridad not in ["Alta", "Media", "Baja"]:
+        print("Prioridad inválida. Usa Alta, Media o Baja.")
+        return
     
     tarea = {
         "id": siguiente_id,
@@ -37,8 +39,13 @@ def agregar_tarea():
     }
     
     tareas.append(tarea)
+    print(f"Tarea '{titulo}' agregada correctamente.")
+    siguiente_id += 1
     
 def listar_tareas():
+    if not tareas:
+        print("No hay tareas registradas.")
+        return
     for tarea in tareas:
         if tarea["estado"] == "Pendiente":
             estado_motrar = "[ ]"
@@ -50,6 +57,7 @@ def listar_tareas():
 def completar_tareas():
     id_tarea = int(input("Ingrese el ID de la tarea: "))
     
+    tarea = buscar_tarea_por_id(id_tarea)
     for tarea in tareas:
         if tarea["id"] == id_tarea:
             tarea["estado"] = "Completado"
