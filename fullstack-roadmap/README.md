@@ -10,9 +10,9 @@
 
 | Etapa | Nombre | Estado | Proyecto / Entregable |
 | :--- | :--- | :---: | :--- |
-| **00** | [Preparación](./etapa-00-preparacion) | 🟡 *En progreso* | Entorno configurado + Repo Git inicializado |
-| **01** | [Programación desde Cero (Python)](./etapa-01-python-basico) | ⚪ *Pendiente* | 10 ejercicios + Sistema de Gestión Personal |
-| **02** | [Algoritmos y Lógica](./etapa-02-algoritmos-logica) | ⚪ *Pendiente* | App de análisis de datos y estadísticas |
+| **00** | [Preparación](./etapa-00-preparacion) | 🟢 *Completado* | Entorno configurado + Repo Git inicializado |
+| **01** | [Programación desde Cero (Python)](./etapa-01-python-basico) | 🟢 *Completado* | 10 ejercicios + Sistema de Gestión Personal |
+| **02** | [Algoritmos y Lógica](./etapa-02-algoritmos-logica) | 🟡 *En Progreso* | App de análisis de datos y estadísticas |
 | **03** | [Programación Orientada a Objetos](./etapa-03-poo) | ⚪ *Pendiente* | Sistema de Inventario / E-commerce en POO |
 | **04** | [Web desde Cero (HTML + CSS + JS)](./etapa-04-web-html-css-js) | ⚪ *Pendiente* | Tienda Web básica con LocalStorage |
 | **05** | [JavaScript Profesional](./etapa-05-js-profesional) | ⚪ *Pendiente* | Tienda Web modularizada y ES6+ |
