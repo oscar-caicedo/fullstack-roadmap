@@ -1,44 +1,41 @@
-# 🏆 Proyecto de Etapa 1 — Sistema de Gestión Personal
+# Sistema de gestión personal
 
-### 🎯 Objetivo
-Integrar todo lo aprendido en la Etapa 1 en una aplicación de consola modular, robusta, con persistencia (archivo JSON) y estadísticas completas.
+Una aplicación de consola para organizar tareas de estudio, trabajo y vida personal. Está hecha con Python y guarda tus cambios en un archivo JSON local.
 
----
+## Empezar
 
-## 📋 Requisitos del Proyecto
+1. Abre una terminal en esta carpeta.
+2. Ejecuta:
 
-### 1. Gestión de Tareas y Actividades
-- [ ] Crear tareas con título, descripción, categoría (Personal, Estudio, Trabajo), fecha límite y prioridad.
-- [ ] Listar tareas con filtros (todas, pendientes, completadas, por categoría).
-- [ ] Modificar datos de una tarea existente.
-- [ ] Marcar tarea como completada o reactivarla.
-- [ ] Eliminar tareas.
-- [ ] Búsqueda por palabra clave en título y descripción.
+   ```bash
+   python main.py
+   ```
 
-### 2. Estadísticas y Reportes
-- [ ] Total de tareas creadas.
-- [ ] Porcentaje de avance / completitud.
-- [ ] Tareas pendientes agrupadas por prioridad.
-- [ ] Conteo de tareas por categoría.
+3. Elige una opción del menú y sigue las indicaciones. No necesitas instalar paquetes.
 
-### 3. Persistencia de Datos
-- [ ] Guardar las tareas en un archivo local (`tareas.json`) automáticamente al hacer cambios.
-- [ ] Cargar las tareas existentes al iniciar el programa de forma segura.
+## Qué puedes hacer
 
-### 4. Robustez y Calidad de Código
-- [ ] Manejo de excepciones (`try/except` para entradas no válidas y archivos corruptos).
-- [ ] Estructura modular dividida en funciones limpias y con responsabilidades únicas.
-- [ ] Menú interactivo intuitivo y legible.
+- Agregar tareas con título, descripción, categoría, fecha límite y prioridad.
+- Ver todas las tareas o filtrarlas por estado o categoría.
+- Actualizar una tarea. Si dejas un campo vacío, conserva su valor actual.
+- Marcarla como completada o devolverla a pendientes.
+- Buscar palabras en títulos y descripciones; la búsqueda no distingue mayúsculas ni tildes.
+- Consultar un resumen de avance, prioridades y categorías.
+- Eliminar una tarea después de confirmar la acción.
 
----
+Las fechas se escriben como `AAAA-MM-DD` (por ejemplo, `2026-10-16`). Las categorías disponibles son Personal, Estudio y Trabajo; las prioridades son Alta, Media y Baja.
 
-## 📁 Archivos Sugeridos
+## Datos y archivos
+
+El programa crea `tareas.json` junto a `main.py` cuando guardas tu primera tarea. Tus datos permanecen en ese archivo local; no se envían a ningún servicio. Si el archivo no existe, la aplicación empieza con una lista vacía. Si sus datos no son válidos, el programa avisa y evita sobrescribirlos.
+
+## Estructura
+
 ```text
 proyecto_gestion_personal/
-├── main.py          # Punto de entrada y menú interactivo
-├── storage.py       # Lectura y guardado de JSON
-├── tasks.py         # Lógica CRUD y búsqueda de tareas
-├── stats.py         # Funciones de cálculo y métricas
-├── data/            # Carpeta para tareas.json
-└── README.md
+├── main.py       # Menú e interacción con la persona usuaria
+├── tasks.py      # Búsqueda y filtros
+├── stats.py      # Resumen de tareas
+├── storage.py    # Lectura y guardado de JSON
+└── tareas.json   # Se crea al guardar la primera tarea
 ```
